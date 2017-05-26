@@ -1,0 +1,5 @@
+Song.create(title: "We belong together", released: true, release_year: 2005, artist_name: "Mariah Carey", genre: "R&B")
+Song.create(title: "It's not right, but it's ok", released: true, release_year: 1995, artist_name: "Whitney Houston", genre: "R&B")
+Song.create(title: "Oops, I did it again", released: true, release_year: 1998, artist_name: "Britney Spears", genre: "Pop")
+Song.create(title: "Right as Rain", released: true, release_year: 2008, artist_name: "Adele", genre: "Pop")
+Song.create(title: "Burn Rubber", released: true, release_year: 1982, artist_name: "Gap Band", genre: "Funk")

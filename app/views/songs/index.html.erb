@@ -1,0 +1,29 @@
+<h1>You have <%=@songs.size%> songs in your library!</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Release Year</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @songs.each do |song| %>
+        <tr>
+            <td><%=song.id%></td>
+            <td><%=song.title%></td>
+            <td><%=song.artist_name%></td>
+            <td><%=song.release_year%></td>
+            <td><%=song.genre%></td>
+            <td>
+                <%= link_to "View", song %>
+                <%= link_to "Edit", edit_song_path(song) %>
+                <%= link_to "Delete", delete_song_path(song), method: :delete, data: {confirm: "Are you sure?"}%>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

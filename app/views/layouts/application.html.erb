@@ -4,10 +4,17 @@
   <title>CrudWithValidationsLab</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
-
-<%= yield %>
-
+  
+  <%= yield %>
+  
+  <% unless current_page?(controller: "songs", action: "index")%>
+    <hr/>
+    <%= link_to "All Songs", songs_path%>
+  <% end %>
+  
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
